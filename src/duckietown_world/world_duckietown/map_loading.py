@@ -326,6 +326,9 @@ def get_xy_slot(i):
 
 def get_texture_file(tex_name: str) -> str:
     resources, _ = get_data_resources()
+    # added for tags
+    if (tex_name in resources):
+        return resources[tex_name]
     res = []
     tried = []
 
